@@ -1,0 +1,209 @@
+body {
+    font-family: 'Roboto', "Pretendard Variable", 'Pretendard', 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.025em;
+}
+
+
+
+
+/* top_header 탑헤더메뉴 */
+#top_header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    padding: 0 200px;
+    justify-content: space-between;
+    line-height: 100px;
+    background: #fff;
+}
+
+#top_header h2 {
+    font-size: 0;
+}
+
+#top_header .gnb>ul {
+    display: flex;
+}
+
+#top_header .gnb>ul>li>a {
+    padding: 0 20px;
+}
+
+#top_header .gnb>ul>li {
+    position: relative;
+}
+
+#top_header .gnb>ul>li a {
+    display: block;
+    text-align: center;
+}
+
+#top_header .gnb>ul>li .submenu {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    line-height: 35px;
+    width: 130px;
+    transform: translate(-50%, 0);
+    margin: 20px 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#top_header .gnb:hover>ul>li .submenu {
+    height: 220px;
+
+}
+
+#top_header .gnb::before {
+    content: "";
+    position: absolute;
+    top: 115px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    transition: 0.5s;
+}
+
+#top_header:hover .gnb::before {
+    height: 240px;
+}
+
+
+
+
+
+
+
+
+
+
+/* section */
+.section {
+    background: tomato;
+}
+
+.section:nth-of-type(2) {
+    background: #fff;
+}
+
+.section:nth-of-type(4) {
+    background: #fff;
+}
+
+
+
+
+
+
+/* mainVisual */
+.mainVisual {
+    background: url(../img/main01.jpg)no-repeat left top/cover;
+}
+
+.mainVisual .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* top_header 상단 메뉴바 부분 side */
+.side {
+    position: fixed;
+    top: 50%;
+    left: 67px;
+    transform: translate(0, -50%);
+    z-index: 999;
+}
+
+.side ul {
+    width: 100px;
+}
+
+.side a {
+    position: relative;
+    display: block;
+    text-align: right;
+    line-height: 40px;
+    color: #fff;
+    padding: 0 0 0 50px;
+    font-size: 12px;
+}
+
+.side a.on {
+    color: #444;
+}
+
+.side.on a {
+    color: #444;
+}
+
+.side a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.side a:hover::before {
+    width: 8px;
+    height: 8px;
+}
+
+.side a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    border: 2px solid#fff;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.side.on a::after {
+    border: 2px solid#444;
+}
+
+.side.on a::before {
+    background: #444;
+}
+
+.side a:hover::after {
+    opacity: 1;
+}
+
+.side li.on a::after {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* totop 화살표 */
+.totop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    display: none;
+}
